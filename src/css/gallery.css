@@ -1,0 +1,40 @@
+.showcase {
+    width: 300px;
+    height: 500px;
+}
+
+/* art */
+#art > .showcase {
+    height: fit-content;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.showcase img {
+    aspect-ratio: 1/1;
+    width: 100%;
+    display: block;
+    object-fit: fill;
+    border-radius: 5px;
+    transition: scale 200ms cubic-bezier(.2,.2,.5,1.75), box-shadow 450ms;
+}
+
+.showcase img.big {
+    grid-column: 1 / 2;
+}
+
+.showcase img:hover {
+    scale: 1.2;
+    box-shadow: 0px 2px 10px hsl(var(--background) / 0.5);
+}
+
+/* dev */
+#dev > .showcase {
+    display: flex;
+    flex-direction: column;
+}
+
+.project p {
+    text-align: justify;
+}
