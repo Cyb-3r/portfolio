@@ -18,22 +18,44 @@
                 Here's a selection of works that I've made over the past
                 few years.
             </p>
-        <div id="work">
-            <section id="art">
-                <h3>Art</h3>
-                <div class="showcase">
-                    <img src="img/gallery/insta_Dripachu.png" alt="img" draggable="false" />
-                    <img src="img/gallery/peppino.png" alt="img" draggable="false" />
-                    <img src="img/gallery/SA2POSE.png" alt="img" draggable="false" />
-                    <img src="img/gallery/SOINC.png" alt="img" draggable="false" />
-                    <img class="big" src="img/gallery/TitleMockupTWT.png" alt="img" draggable="false" />
-                </div>
-            </section>
-            <section id="dev">
-                <h3>Dev</h3>
-                <div class="showcase">
+            <nav id="menu">
+                <button onclick="switchPages(1)" data-select="true" class="tab">Art</button>
+                <button onclick="switchPages(2)" data-select="false" class="tab">Dev</button>
+            </nav>
+            <div id="work">
+                <section id="art" data-select="true">
+                    <a href="img/gallery/dripachu.png" target="_blank">
+                        <img src="img/gallery/dripachu.png" alt="img" draggable="false" />
+                    </a>
+                    <a href="img/gallery/peppino.png" target="_blank">
+                        <img src="img/gallery/peppino.png" alt="img" draggable="false" />
+                    </a>
+                    <a href="img/gallery/sa1pose.png" target="_blank">
+                        <img src="img/gallery/sa1pose.png" alt="img" draggable="false" />
+                    </a>
+                    <a href="img/gallery/sonic.png" target="_blank">
+                        <img src="img/gallery/sonic.png" alt="img" draggable="false" />
+                    </a>
+                    <a class="big" href="img/gallery/titlescreen.png" target="_blank">
+                        <img src="img/gallery/titlescreen.png" alt="img" draggable="false" />
+                    </a>
+                    <a href="img/gallery/pawn.png" target="_blank">
+                        <img src="img/gallery/pawn.png" alt="img" draggable="false" />
+                    </a>
+                    <a href="img/gallery/royal.png" target="_blank">                        
+                        <img src="img/gallery/royal.png" alt="img" draggable="false" />
+                    </a>
+                    <a class="big" href="img/gallery/knuckles.png" target="_blank">
+                        <img src="img/gallery/knuckles.png" alt="img" draggable="false" />
+                    </a>
+                    <a class="wide" href="img/gallery/platform.png" target="_blank">
+                        <img src="img/gallery/platform.png" alt="img" draggable="false" />
+                    </a>
+                </section>
+
+                <section id="dev" data-select="false">                    
                     <div class="project">
-                        <h4>Rising</h4>
+                        <h3>Rising</h3>
                         <p>
                             This is a simple turn based combat system where
                             you must progress through a number of floors in
@@ -42,7 +64,7 @@
                         <a href="" target="_blank">check it out</a>
                     </div>
                     <div class="project">
-                        <h4>Cyblog</h4>
+                        <h3>Cyblog</h3>
                         <p>
                             This is a personnal blog website that I want to
                             make in order to share about my life and projects.
@@ -51,20 +73,22 @@
                         <a href="" target="_blank">check it out</a>
                     </div>
                     <div class="project">
-                        <h4>test</h4>
+                        <h3>Tails Picross</h3>
                         <p>
-                            paragraphe
+                            This is a fangame project that I am part of. <br>
+                            It is a puzzle game in which you have to figure out
+                            the secret drawing using numbers.
                         </p>
                         <a href="" target="_blank">check it out</a>
                     </div>
-                </div>
-            </section>
-        </div>
+                </section>
+            </div>
         </div>
     </div>
     <footer id="foot">
         <small><em>2023 - Cyb</em></small>
     </footer>
     <script src="src/js/main.js"></script>
+    <script src="src/js/showcase.js"></script>
 </body>
 </html>

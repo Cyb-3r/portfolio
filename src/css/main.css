@@ -1,5 +1,6 @@
 :root {
     /* palette */
+    --primary-250: hsl(20 100% 75%);
     --primary-500: hsl(15 90% 55%);
 
     --grayscale-500: hsl(0 0% 50%);
@@ -9,6 +10,7 @@
     --foreground-a25: hsl(0 0% 100% / 0.25);
     --foreground-a1: hsl(0 0% 100% / 0.1);
     --background: hsl(0 0% 10%);
+    --shadow: hsl(0 0% 10% / 0.5);
 }
 
 /* global rules */
@@ -94,6 +96,15 @@ body {
     color: var(--foreground-a5)
 }
 
+.fakeLink {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.details {
+    color: var(--foreground-a5)
+}
+
 #head {
     width: 100%;
     height: 3.5rem;
@@ -110,15 +121,19 @@ body {
     font-weight: 600;
     font-variant: small-caps;
 }
+
 #head a:hover {
     text-decoration: underline;
 }
+
 #head a::before {
     content: "#";
+    font-variant: small-caps;
     margin-right: 0.5rem;
 }
 
 #body {
+    width: 600px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -138,9 +153,25 @@ body {
     border-radius: 5px 0 0 0;
 }
 
+#skills {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0;
+    list-style: none;
+}
+
+#skills li::after {
+    content: ';';
+    position: relative;
+    top: 5px;
+    left: 3px;
+    /* font-size: 1.5rem; */
+    font-weight: 600;
+}
+
 #socials {
     width: 100%;
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     gap: 1rem;
     justify-content: space-between;
@@ -158,10 +189,7 @@ body {
 
 #socials a[href="#"] {
     background-color: var(--foreground-a25);
-}
-
-#socials a[href="#"]:hover {
-    background-color: var(--foreground-a25);
+    pointer-events: none;
 }
 
 #socials > a:hover {
@@ -170,12 +198,10 @@ body {
 }
 
 #work {
-    width: clamp(600px, 100%, 1200px);
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-direction: row;
-    /* border: solid 1px var(--grayscale-500); */
+    width: 600px;
+    height: 600px;
+    position: relative;
+    overflow: visible;
 }
 
 #pricing {
@@ -197,6 +223,17 @@ body {
     width: 50%;
 }
 
-#pricing .details {
-    color: var(--foreground-a5)
+#comms {
+    width: 100%;
+    height:fit-content;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: left;
+    flex-direction: row;
+}
+
+#comms img {
+    aspect-ratio: 1/1;
+    width: 100%;
+    border-radius: 5px;
 }
