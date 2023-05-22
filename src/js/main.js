@@ -9,7 +9,7 @@ let color = Math.random() * 359;
 function rainbow() {
     if (color > 359) {color = 0;}
     setTimeout(function(){rainbow();}, 75);
-    bodyNode.style.background = "radial-gradient(circle at 50%, hsl("+color+" 90% 50% / 0.2) 0%, var(--background) 60%)";
+    bodyNode.style.background = "radial-gradient(circle at 50%, hsl("+color+" 100% 50% / 0.25) 0%, var(--background) 75%)";
     color++;
 }
 // launch loop

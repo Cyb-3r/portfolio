@@ -7,6 +7,10 @@ section {
     inset: 0;
 }
 
+#showcase {
+    width: 100%;
+}
+
 #menu {
     width: 100%;
     display: flex;
@@ -18,6 +22,7 @@ section {
 
 .tab {
     width: 100%;
+    height: 1.75rem;
     color: var(--foreground);
     background: none;
     border: solid 1px var(--foreground-a5);
@@ -93,15 +98,18 @@ section {
 
 @media only screen and (max-width: 700px) {
     #menu .tab {
-        font-size: 1.5rem;
+        height: 2.5rem;
     }
 
     #art {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
+        overflow-y: auto;
     }
 
-    .project p {
+    #art img:hover {
+        scale: none;
+        box-shadow: none;
     }
 
     .project a {
