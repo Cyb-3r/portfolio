@@ -101,6 +101,10 @@ section {
         height: 2.5rem;
     }
 
+    #work {
+        margin-bottom: 2rem;
+    }
+
     #art {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);

@@ -5,6 +5,6 @@ It features a responsive and simple design, so if you want to check on my portfo
 
 The whole thing is written in pure html, css, and javascript.
 
-## changelog
+## current status
 
 For the while, it's complete enough to be online, but there are still some things missing such as the links to my projects. They will eventually be added as I update my portfolio.
