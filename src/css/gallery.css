@@ -10,7 +10,7 @@ section {
 #menu {
     width: 100%;
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
     flex-direction: row;
     justify-content: space-around;
     margin-bottom: 1rem;
@@ -78,4 +78,34 @@ section {
 
 .project p {
     text-align: justify;
+}
+
+.projectHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.projectHeader * {
+    margin: 0;
+}
+
+@media only screen and (max-width: 700px) {
+    #menu .tab {
+        font-size: 1.5rem;
+    }
+
+    #art {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .project p {
+        font-size: 1.5rem;
+    }
+
+    .project a {
+        text-decoration: underline;
+    }
 }
